@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Joy Goswami Niloy | Portfolio</title>
+    
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { accent: '#00f2ff', darkBg: '#050a15' },
+                    animation: { 'float': 'floating 3s ease-in-out infinite' },
+                    keyframes: {
+                        floating: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+        body { font-family: 'Space Grotesk', sans-serif; transition: background-color 0.5s ease; overflow-x: hidden; width: 100%; }
+        html { overflow-x: hidden; width: 100%; }
+        .bento-card { background: rgba(15, 23, 42, 0.03); border: 1px solid rgba(0, 0, 0, 0.05); backdrop-filter: blur(12px); transition: all 0.4s ease; }
+        .dark .bento-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .bento-card:hover { border-color: #00f2ff; transform: translateY(-5px); box-shadow: 0 15px 30px -10px rgba(0, 242, 255, 0.2); }
+        .profile-glow { box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); }
+        .btn-glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); color: white; }
+        .btn-glass:hover { background: #00f2ff; color: #050a15; border-color: #00f2ff; transform: scale(1.1); }
+        .animate-zoom-in { animation: zoomIn 0.3s ease-out; }
+        @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 dark:bg-darkBg dark:text-slate-100 min-h-screen">
+
+    <nav class="navbar fixed top-0 z-[100] bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5 px-4 md:px-16">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white dark:bg-darkBg rounded-box w-52 border border-accent/20">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Work</a></li>
+                </ul>
+            </div>
+            <a href="#" class="text-xl md:text-2xl font-black tracking-tighter italic uppercase">Joy Goswami<span class="text-accent"> Niloy</span></a>
+        </div>
+        <div class="navbar-end gap-4">
+            <div class="hidden md:flex gap-4">
+                <a href="#about" class="btn btn-ghost btn-sm font-bold uppercase tracking-widest">About</a>
+                <a href="#skills" class="btn btn-ghost btn-sm font-bold uppercase tracking-widest">Skills</a>
+                <a href="#projects" class="btn btn-ghost btn-sm font-bold uppercase tracking-widest">Work</a>
+            </div>
+            <button onclick="toggleTheme()" class="btn btn-ghost btn-circle text-xl"><i id="theme-icon" class="fa-solid fa-moon"></i></button>
+            <a href="https://linkedin.com/in/joy-goswami" target="_blank" class="hidden sm:flex btn btn-accent btn-sm rounded-full text-darkBg font-bold px-6">LinkedIn</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-20 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 blur-[120px] rounded-full -z-10"></div>
+        
+        <div class="relative mb-10" data-aos="zoom-in">
+            <div class="w-44 h-44 md:w-60 md:h-60 rounded-[3rem] overflow-hidden border-2 border-accent profile-glow animate-float">
+                <img src="./img/IMG_20260308_211515.png" onerror="this.src='https://via.placeholder.com/300?text=Joy+Goswami'" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="absolute -bottom-2 -right-2 bg-accent text-darkBg text-xs font-black px-4 py-2 rounded-xl uppercase shadow-lg">Open to Work</div>
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-tight uppercase" data-aos="fade-up">
+            JOY GOSWAMI <br class="block sm:hidden"> <span class="text-accent italic">NILOY</span>
+        </h1>
+        
+        <div class="text-xl md:text-3xl font-medium opacity-60 mt-6 tracking-[0.2em] md:tracking-[0.3em] h-10" data-aos="fade-up" data-aos-delay="200">
+            <span id="typed-text"></span>
+        </div>
+
+       <div class="mt-12 flex flex-col sm:flex-row flex-wrap gap-4 w-full max-w-xs sm:max-w-none justify-center" data-aos="fade-up" data-aos-delay="400">
+    <!-- Primary Action: Resume Download -->
+    <a href="#" download="Joy_Goswami_Resume.pdf" class="btn btn-lg bg-white text-black hover:bg-accent hover:text-white border-none px-10 rounded-2xl font-bold w-full sm:w-auto shadow-lg transition-all flex items-center gap-2">
+        <i class="fa-solid fa-file-arrow-down"></i>
+        Download CV
+    </a>
+
+    <!-- Secondary Action: Projects -->
+    <a href="#projects" class="btn btn-lg btn-accent px-10 rounded-2xl font-bold text-darkBg w-full sm:w-auto">
+        View Projects
+    </a>
+
+    <!-- Contact Action: Hire Me -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joygoswaminiloy2023@gmail.com" class="btn btn-lg btn-outline rounded-2xl px-10 border-slate-300 dark:border-white/20 w-full sm:w-auto">
+        Hire Me
+    </a>
+</div>
+    </section>
+<!-- ABOUT ME  -->
+    <section id="about" class="py-20 max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8 items-center">
+        <div class="md:col-span-2" data-aos="fade-right">
+            <h2 class="text-3xl md:text-4xl font-black mb-8 italic tracking-widest uppercase border-l-4 border-accent pl-4">The Persona</h2>
+            
+            <p class="text-lg md:text-xl leading-relaxed opacity-80">
+                I am <span class="text-accent font-bold">Joy Goswami</span>, a passionate <span class="text-accent font-bold">Web Developer</span> and B.Sc. in CSE student who views coding as the perfect bridge between logic and creativity. My journey is fueled by a "learn-by-doing" mindset, where every project—from personal portfolios to medical scanning apps—serves as a canvas for problem-solving.
+            </p>
+
+            <p class="mt-6 text-base md:text-lg opacity-70">
+                I thrive in collaborative environments, often working with my team, the "Tech Titans," to turn complex academic requirements into functional digital realities. Whether I am architecting a responsive MFS interface like PAYOO or exploring the intricacies of Finite Automata, I approach every challenge with precision and curiosity.
+            </p>
+
+            <p class="mt-6 text-base md:text-lg opacity-70">
+                Beyond the terminal, I am a musician who loves the strings of a guitar and a cricket enthusiast who appreciates the strategy behind every match. I also find inspiration in gaming and the company of cats, which help me maintain a balanced and creative workspace.
+            </p>
+            
+            <!-- Skill & Interest Badges -->
+            <div class="flex flex-wrap gap-3 mt-10">
+                <div class="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-white/5 rounded-xl border border-slate-300 dark:border-white/10">
+                    <i class="fa-solid fa-code text-accent"></i>
+                    <span class="text-xs font-bold uppercase">Frontend Architecture</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-white/5 rounded-xl border border-slate-300 dark:border-white/10">
+                    <i class="fa-solid fa-guitar text-accent"></i>
+                    <span class="text-xs font-bold uppercase">Music & Art</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-white/5 rounded-xl border border-slate-300 dark:border-white/10">
+                    <i class="fa-solid fa-cat text-accent"></i>
+                    <span class="text-xs font-bold uppercase">Cat Enthusiast</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personality Quote Card -->
+        <div class="bento-card p-10 rounded-[3rem] text-center border-dashed border-2 border-accent/30" data-aos="fade-left">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fa-solid fa-quote-left text-accent text-2xl"></i>
+            </div>
+            <p class="italic text-base opacity-80">""I love the process of turning a blank screen into a functional reality"</p>
+        </div>
+    </div>
+</section>
+
+<!-- social  -->
+
+<section id="socials" class="py-20 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-black mb-12 italic tracking-widest uppercase border-l-4 border-accent pl-4">Digital Footprint</h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- GitHub Button -->
+        <a href="https://github.com/joygoswaminiloy2023-droid" target="_blank" 
+           class="bento-card group p-8 rounded-[2rem] flex flex-col items-center justify-center gap-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all hover:border-[#181717] dark:hover:border-white hover:shadow-xl">
+            <div class="w-16 h-16 rounded-2xl bg-[#181717]/5 dark:bg-white/5 flex items-center justify-center text-[#181717] dark:text-white transition-transform group-hover:-translate-y-2">
+                <i class="fa-brands fa-github text-4xl"></i>
+            </div>
+            <div class="text-center">
+                <span class="block font-black uppercase tracking-widest text-sm">GitHub</span>
+                <span class="text-[10px] opacity-50 uppercase">Open Source & Labs</span>
+            </div>
+        </a>
+
+        <!-- LinkedIn Button -->
+        <a href="https://linkedin.com/in/joy-goswami" target="_blank" 
+           class="bento-card group p-8 rounded-[2rem] flex flex-col items-center justify-center gap-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all hover:border-[#0077B5] hover:shadow-xl">
+            <div class="w-16 h-16 rounded-2xl bg-[#0077B5]/10 flex items-center justify-center text-[#0077B5] transition-transform group-hover:-translate-y-2">
+                <i class="fa-brands fa-linkedin-in text-4xl"></i>
+            </div>
+            <div class="text-center">
+                <span class="block font-black uppercase tracking-widest text-sm">LinkedIn</span>
+                <span class="text-[10px] opacity-50 uppercase">Professional Network</span>
+            </div>
+        </a>
+
+        <!-- Facebook Button -->
+        <a href="https://www.facebook.com/share/1BS2a3YRcv/" target="_blank" 
+           class="bento-card group p-8 rounded-[2rem] flex flex-col items-center justify-center gap-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all hover:border-[#1877F2] hover:shadow-xl">
+            <div class="w-16 h-16 rounded-2xl bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2] transition-transform group-hover:-translate-y-2">
+                <i class="fa-brands fa-facebook-f text-4xl"></i>
+            </div>
+            <div class="text-center">
+                <span class="block font-black uppercase tracking-widest text-sm">Facebook</span>
+                <span class="text-[10px] opacity-50 uppercase">Community & Life</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- SKILL  -->
+ <section id="skills" class="py-20 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-black mb-12 italic tracking-widest uppercase border-l-4 border-accent pl-4">Skill Arsenal</h2>
+    
+    <!-- Graphical Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Large Feature Card: Frontend Mastery -->
+        <div class="md:col-span-2 bento-card p-8 rounded-[2.5rem] bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border border-slate-200 dark:border-white/10 transition-all hover:shadow-2xl hover:shadow-accent/10">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-xl font-black uppercase tracking-tighter">Frontend Core</h3>
+             <div class="flex gap-4 items-center">
+    <!-- Next.js (Official Black/White) -->
+    <div class="text-center group">
+        <i class="fa-solid fa-layer-group text-2xl text-black dark:text-white transition-transform group-hover:scale-110"></i>
+    </div>
+
+    <!-- React (Official Cyan) -->
+    <div class="text-center group">
+        <i class="fa-brands fa-react text-2xl text-[#61DAFB] animate-spin-slow transition-transform group-hover:scale-110"></i>
+    </div>
+
+    <!-- JavaScript (Official Yellow) -->
+    <div class="text-center group">
+        <i class="fa-brands fa-js text-2xl text-[#F7DF1E] transition-transform group-hover:scale-110"></i>
+    </div>
+
+    <!-- Tailwind CSS (Official Sky) -->
+    <div class="text-center group">
+        <i class="fa-solid fa-wind text-2xl text-[#06B6D4] transition-transform group-hover:scale-110"></i>
+    </div>
+
+    <!-- HTML5 (Official Orange) -->
+    <div class="text-center group">
+        <i class="fa-brands fa-html5 text-2xl text-[#E34F26] transition-transform group-hover:scale-110"></i>
+    </div>
+    
+    <!-- MongoDB (Official Green) -->
+    <div class="text-center group">
+        <i class="fa-solid fa-leaf text-2xl text-[#47A248] transition-transform group-hover:scale-110"></i>
+    </div>
+
+    <!-- GitHub (Official Dark/White) -->
+    <div class="text-center group">
+        <i class="fa-brands fa-github text-2xl text-[#181717] dark:text-white transition-transform group-hover:scale-110"></i>
+    </div>
+</div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <!-- Skill with "Graph" indicator -->
+                <div class="space-y-2">
+                    <div class="flex justify-between text-xs font-bold opacity-70"><span>NEXT.JS</span><span>95%</span></div>
+                    <div class="h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div class="h-full bg-accent w-[95%]"></div>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between text-xs font-bold opacity-70"><span>REACT</span><span>90%</span></div>
+                    <div class="h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div class="h-full bg-accent w-[90%]"></div>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between text-xs font-bold opacity-70"><span>TAILWIND</span><span>98%</span></div>
+                    <div class="h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div class="h-full bg-accent w-[98%]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] font-bold uppercase">Raw CSS</span>
+                <span class="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] font-bold uppercase">HTML5</span>
+                <span class="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] font-bold uppercase">Responsive Design</span>
+            </div>
+        </div>
+
+        <!-- Medium Card: Database -->
+        <div class="bento-card p-8 rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 flex flex-col justify-between">
+            <div>
+                <h3 class="text-lg font-black uppercase mb-6">Database</h3>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 border border-green-500/20">
+                            <i class="fa-solid fa-leaf text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold">MongoDB</p>
+                            <p class="text-[10px] opacity-50 uppercase">NoSQL Management</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 border border-blue-500/20">
+                            <i class="fa-solid fa-database text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold">MySQL</p>
+                            <p class="text-[10px] opacity-50 uppercase">Relational Data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Small Stats Card: Tools -->
+        <div class="bento-card p-8 rounded-[2.5rem] bg-slate-900 text-white border border-white/5 relative overflow-hidden group">
+            <div class="relative z-10">
+                <h3 class="text-lg font-black uppercase mb-4">Workflow</h3>
+                <ul class="text-sm space-y-2 opacity-80 font-medium">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent text-[10px]"></i> Git / GitHub</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent text-[10px]"></i> Vercel & Netlify</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent text-[10px]"></i> VS Code Mastery</li>
+                </ul>
+            </div>
+            <!-- Decorative Icon -->
+            <i class="fa-solid fa-screwdriver-wrench absolute -bottom-4 -right-4 text-8xl opacity-5 transition-transform group-hover:rotate-12"></i>
+        </div>
+
+        <!-- Auth & Security -->
+        <div class="md:col-span-2 bento-card p-8 rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 flex items-center justify-between">
+            <div class="flex items-center gap-6">
+                <div class="hidden sm:flex w-16 h-16 rounded-full border-2 border-dashed border-accent items-center justify-center">
+                    <i class="fa-solid fa-user-shield text-2xl text-accent"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-black uppercase">Authentication & Security</h3>
+                    <p class="text-xs opacity-60">Implementing secure sessions with BetterAuth & JWT</p>
+                </div>
+            </div>
+            <div class="flex -space-x-3">
+                <div class="w-10 h-10 rounded-full bg-slate-700 border-2 border-slate-800 flex items-center justify-center text-[10px] font-bold">BA</div>
+                <div class="w-10 h-10 rounded-full bg-accent border-2 border-slate-800 flex items-center justify-center text-[10px] font-bold">JWT</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- education -->
+ <!-- Educational Flow Section -->
+<section id="education" class="py-20 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-black mb-16 italic tracking-widest uppercase border-l-4 border-accent pl-4">Educational Journey</h2>
+    
+    <div class="relative">
+        <!-- Vertical Flow Line -->
+        <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-blue-500 to-transparent opacity-20 -translate-x-1/2"></div>
+
+        <!-- 1. B.Sc. in CSE (Current) -->
+        <div class="relative flex flex-col md:flex-row items-center mb-20 group">
+            <div class="flex-1 md:text-right md:pr-16 w-full mb-6 md:mb-0" data-aos="fade-right">
+                <div class="inline-block px-4 py-1 rounded-full bg-accent/10 text-accent text-[10px] font-black uppercase tracking-widest mb-3">On Progress</div>
+                <h3 class="text-2xl font-black uppercase tracking-tighter">B.Sc. in Computer Science & Engineering</h3>
+                <p class="text-sm font-bold opacity-70">UITS - University of Information Technology and Sciences</p>
+                <p class="mt-3 text-xs opacity-50 max-w-sm md:ml-auto leading-relaxed">
+                    Developing high-end projects like <span class="text-accent font-bold">MediScan</span> and <span class="text-accent font-bold">SavePaws Club</span> while maintaining intensive study in Theory of Computation.
+                </p>
+            </div>
+            <!-- Center Node -->
+            <div class="absolute left-8 md:left-1/2 w-12 h-12 rounded-2xl bg-darkBg border-4 border-accent flex items-center justify-center -translate-x-1/2 z-10 shadow-[0_0_20px_rgba(var(--accent-rgb),0.3)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-graduation-cap text-accent"></i>
+            </div>
+            <div class="flex-1 md:pl-16 hidden md:block"></div>
+        </div>
+
+        <!-- 2. HSC (Completed) -->
+        <div class="relative flex flex-col md:flex-row items-center group">
+            <div class="flex-1 md:order-2 md:pl-16 w-full mt-6 md:mt-0" data-aos="fade-left">
+                <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 text-blue-500 text-[10px] font-black uppercase tracking-widest mb-3">Batch 2022</div>
+                <h3 class="text-2xl font-black uppercase tracking-tighter">Higher Secondary Certificate (HSC)</h3>
+                <p class="text-sm font-bold opacity-70">Dhaka Imperial College</p>
+                <p class="mt-3 text-xs opacity-50 max-w-sm leading-relaxed">
+                    Completed higher secondary education in the Science stream with a strong foundation in Mathematics.
+                </p>
+            </div>
+            <!-- Center Node -->
+            <div class="absolute left-8 md:left-1/2 w-12 h-12 rounded-2xl bg-darkBg border-4 border-blue-500 flex items-center justify-center -translate-x-1/2 z-10 shadow-[0_0_20px_rgba(59,130,246,0.3)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-school text-blue-500"></i>
+            </div>
+            <div class="flex-1 md:order-1 md:pr-16 hidden md:block"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- PROJECTS  -->
+    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-black mb-16 italic tracking-widest uppercase border-l-4 border-accent pl-4" data-aos="fade-right">
+        Selected Projects
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Project 1: Save Paws -->
+       <div class="bento-card rounded-[2.5rem] overflow-hidden group bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all" data-aos="fade-up" data-aos-delay="100">
+    <div class="h-60 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+        <!-- Project Image -->
+        <img src="./img/home.png" onerror="this.src='https://via.placeholder.com/400x300?text=SavePaws+Club'" class="w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-110">
+        
+        <!-- Hover Overlay -->
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+            <button onclick="openModal('./img/HOME.png', 'SavePaws Club', 'A comprehensive animal welfare platform featuring emergency rescue reporting, pet adoption, and a community knowledge hub.')" class="btn btn-circle bg-white text-black border-none hover:bg-accent">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+            <a href="https://github.com/joygoswaminiloy2023-droid/Software-Engineering-and-System-Analysis-Project" target="_blank" class="btn btn-circle btn-accent">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" target="_blank" class="btn btn-circle border-white text-white hover:bg-accent hover:border-accent">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="p-8">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-xl font-bold uppercase tracking-tight dark:text-white">SavePaws Club</h3>
+                <p class="text-sm opacity-60 mt-2">Animal Rescue & Welfare Platform.</p>
+                <!-- Brief Description -->
+                <p class="text-xs opacity-50 mt-4 leading-relaxed max-w-[250px]">
+                    A community-driven platform for animal protection. It integrates 
+                    real-time emergency rescue reporting with GPS, veterinary assistance, 
+                    and a marketplace for pet essentials to reduce stray suffering.
+                </p>
+            </div>
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 text-xl opacity-80 dark:text-white pt-1">
+                <i class="fa-brands fa-php" title="PHP"></i>
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-solid fa-database" title="MySQL"></i>
+                <i class="fa-solid fa-map-location-dot" title="Google Maps API"></i>
+            </div>
+        </div>
+    </div>
+</div>
+        
+
+
+        <!-- Project 2: Medi Scan -->
+      <div class="bento-card rounded-[2.5rem] overflow-hidden group bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all" data-aos="fade-up" data-aos-delay="100">
+    <div class="h-60 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+        <!-- Project Image -->
+        <img src="./img/dash.png" onerror="this.src='https://via.placeholder.com/400x300?text=MediScan'" class="w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-110">
+        
+        <!-- Progress Badge -->
+        <span class="absolute top-4 right-4 bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">On Progress</span>
+
+        <!-- Hover Overlay -->
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+            <button onclick="openModal('./img/dash.png', 'Medi Scan', 'AI-powered health diagnostic and prediction system integrating symptom analysis, X-ray scanning, and risk forecasting.')" class="btn btn-circle bg-white text-black border-none hover:bg-accent">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+            <a href="https://github.com/joygoswaminiloy2023-droid/Ai-Health-Diagnostic-System-spdd-Lab" target="_blank" class="btn btn-circle btn-accent">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://mediscanlive.netlify.app/" target="_blank" class="btn btn-circle border-white text-white hover:bg-accent hover:border-accent">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="p-8">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-xl font-bold uppercase tracking-tight dark:text-white">Medi Scan</h3>
+                <p class="text-sm opacity-60 mt-2">AI Health Diagnostic System.</p>
+                <!-- Brief Description -->
+                <p class="text-xs opacity-50 mt-4 leading-relaxed max-w-[250px]">
+                    An advanced medical hub featuring symptom prediction, X-ray analysis, 
+                    and risk forecasting. Designed with a clean medical interface for 
+                    secure user health tracking and smart doctor recommendations.
+                </p>
+            </div>
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 text-xl opacity-80 dark:text-white pt-1">
+                <i class="fa-solid fa-layer-group" title="Next.js"></i>
+                <i class="fa-brands fa-css3-alt" title="Tailwind CSS"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+                <i class="fa-solid fa-shield-halved" title="BetterAuth"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Project 3: Issue Tracker -->
+      <div class="bento-card rounded-[2.5rem] overflow-hidden group bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all" data-aos="fade-up" data-aos-delay="200">
+    <div class="h-60 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+        <!-- Project Image -->
+        <img src="./img/issue.png" onerror="this.src='https://via.placeholder.com/400x300?text=Issue+Tracker'" class="w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-110">
+        
+        <!-- Hover Overlay -->
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+            <!-- Modal Preview -->
+            <button onclick="openModal('./img/issue.png', 'GitHub Issue Tracker', 'A real-world issue tracking simulation with authentication, status filtering, and REST API integration.')" class="btn btn-circle bg-white text-black border-none hover:bg-accent">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+            
+            <!-- GitHub Link -->
+            <a href="https://github.com/joygoswaminiloy2023-droid/B13-A5-Github-Issue-Tracker" target="_blank" class="btn btn-circle btn-accent">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <!-- Live Link -->
+            <a href="https://joygoswaminiloy2023-droid.github.io/B13-A5-Github-Issue-Tracker/" target="_blank" class="btn btn-circle border-white text-white hover:bg-accent hover:border-accent">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="p-8">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-xl font-bold uppercase tracking-tight dark:text-white">Issue Tracker</h3>
+                <p class="text-sm opacity-60 mt-2">GitHub API management tool.</p>
+                <!-- Brief Description -->
+                <p class="text-xs opacity-50 mt-4 leading-relaxed max-w-[250px]">
+                    A productivity tool featuring a secure login system and real-time issue management. 
+                    Includes dynamic status filtering (Open/Closed), API-based search, 
+                    and responsive UI with specialized status indicators.
+                </p>
+            </div>
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 text-xl opacity-80 dark:text-white pt-1">
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt" title="Tailwind CSS"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+                <i class="fa-solid fa-link" title="REST API"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Project 4: Book Vibes -->
+       <div class="bento-card rounded-[2.5rem] overflow-hidden group bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all" data-aos="fade-up">
+    <div class="h-60 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+        <!-- Project Image -->
+        <img src="./img/book.png" onerror="this.src='https://via.placeholder.com/400x300?text=Book+Vibe'" class="w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-110">
+        
+        <!-- Hover Overlay -->
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+            <!-- Modal Preview -->
+            <button onclick="openModal('./img/book.png', 'Book Vibe', 'A modern book management system to organize reading lists, track progress, and manage wishlists.')" class="btn btn-circle bg-white text-black border-none hover:bg-accent">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+            
+            <!-- GitHub Link -->
+            <a href="https://github.com/joygoswaminiloy2023-droid/Book_Vibe" target="_blank" class="btn btn-circle btn-accent">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <!-- Live Link -->
+            <a href="https://melodious-taiyaki-d65ca2.netlify.app/" target="_blank" class="btn btn-circle border-white text-white hover:bg-accent hover:border-accent">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="p-8">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-xl font-bold uppercase tracking-tight dark:text-white">Book Vibe</h3>
+                <p class="text-sm opacity-60 mt-2">Personal library & progress tracker.</p>
+                <!-- Brief Description -->
+                <p class="text-xs opacity-50 mt-4 leading-relaxed max-w-[250px]">
+                    A responsive React application for organizing personal libraries. 
+                    Includes a tab-based system to manage Wishlists and Read books 
+                    with dynamic UI updates and React Router navigation.
+                </p>
+            </div>
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 text-xl opacity-80 dark:text-white pt-1">
+                <i class="fa-brands fa-react" title="React.js"></i>
+                <i class="fa-brands fa-css3-alt" title="Tailwind CSS"></i>
+                <i class="fa-brands fa-js" title="JavaScript ES6"></i>
+                <i class="fa-solid fa-code" title="JSON Data"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Project 5: English Janala -->
+       <div class="bento-card rounded-[2.5rem] overflow-hidden group bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all" data-aos="fade-up" data-aos-delay="100">
+    <div class="h-60 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+        <!-- Project Image -->
+        <img src="./img/english.png" onerror="this.src='https://via.placeholder.com/400x300?text=EnglishJanala'" class="w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-110">
+        
+        <!-- Hover Overlay -->
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+            <button onclick="openModal('./img/english.png', 'English Janala', 'An advanced vocabulary learning tool featuring level-based word lists, text-to-speech pronunciation, and search functionality.')" class="btn btn-circle bg-white text-black border-none hover:bg-accent">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+            <a href="https://github.com/joygoswaminiloy2023-droid/english-janala" target="_blank" class="btn btn-circle btn-accent">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://joygoswaminiloy2023-droid.github.io/english-janala/" target="_blank" class="btn btn-circle border-white text-white hover:bg-accent hover:border-accent">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="p-8">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-xl font-bold uppercase tracking-tight dark:text-white">English-Janala</h3>
+                <p class="text-sm opacity-60 mt-2">Interactive dictionary & learning tool.</p>
+                <!-- Brief Description -->
+                <p class="text-xs opacity-50 mt-4 leading-relaxed max-w-[250px]">
+                    A vocabulary learning app that fetches dynamic data from APIs. 
+                    Includes a Web Speech API for audio pronunciation, search filters, 
+                    and a "favorites" system for personalized practice.
+                </p>
+            </div>
+            <!-- Font Awesome Tech Stack Icons -->
+            <div class="flex gap-3 text-xl opacity-80 dark:text-white pt-1">
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+                <i class="fa-solid fa-microchip" title="Web Speech API"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Project 7: Payoo -->
+   <div class="bento-card rounded-[2.5rem] overflow-hidden group bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all" data-aos="fade-up">
+    <div class="h-60 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+        <!-- Project Image -->
+        <img src="./img/payoo.png" onerror="this.src='https://via.placeholder.com/400x300?text=PAYOO+MFS'" class="w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-110">
+        
+        <!-- Hover Overlay -->
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+            <!-- Modal Preview -->
+            <button onclick="openModal('./img/payoo.png', 'PAYOO - Smart MFS', 'A smart Mobile Financial Services interface supporting Add Money, Cash Out, and secure transfers.')" class="btn btn-circle bg-white text-black border-none hover:bg-accent">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+            
+            <!-- GitHub Link (Replace with your actual repo link) -->
+            <a href="https://github.com/joygoswaminiloy2023-droid" target="_blank" class="btn btn-circle btn-accent">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <!-- Live Link (Replace with your actual deployment link) -->
+            <a href="#" target="_blank" class="btn btn-circle border-white text-white hover:bg-accent hover:border-accent">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="p-8">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-xl font-bold uppercase tracking-tight dark:text-white">PAYOO MFS</h3>
+                <p class="text-sm opacity-60 mt-2">Smart Mobile Financial Interface.</p>
+                <!-- Brief Description -->
+                <p class="text-xs opacity-50 mt-4 leading-relaxed max-w-[250px]">
+                    A seamless digital banking experience featuring secure authentication, 
+                    transaction history, and PIN-verified financial operations like 
+                    Cash Out and Money Transfer.
+                </p>
+            </div>
+            <!-- Tech Stack Icons -->
+            <div class="flex gap-3 text-xl opacity-80 dark:text-white pt-1">
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt" title="Tailwind CSS"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+                <i class="fa-solid fa-shield-halved" title="Secure PIN System"></i>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- Project 8: Payoo -->
+<div class="bento-card rounded-[2.5rem] overflow-hidden group bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 transition-all" data-aos="fade-up">
+    <div class="h-60 bg-slate-900 flex items-center justify-center relative overflow-hidden">
+        <!-- Project Image -->
+        <img src="./img/dragon.png" onerror="this.src='https://via.placeholder.com/400x300?text=Dragon+News'" class="w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-110">
+        
+        <!-- Hover Overlay -->
+        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+            <!-- Modal Preview -->
+            <button onclick="openModal('./img/dragon.png', 'Dragon News', 'A high-performance news portal featuring real-time updates, dynamic categorization, and secure authentication.')" class="btn btn-circle bg-white text-black border-none hover:bg-accent">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+            
+            <!-- GitHub Link -->
+            <a href="https://github.com/joygoswaminiloy2023-droid/dragon-news" target="_blank" class="btn btn-circle btn-accent">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <!-- Live Link -->
+            <a href="https://dragon-news-beige.vercel.app/" target="_blank" class="btn btn-circle border-white text-white hover:bg-accent hover:border-accent">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="p-8">
+        <div class="flex justify-between items-start">
+            <div class="flex-1">
+                <h3 class="text-xl font-bold uppercase tracking-tight dark:text-white">Dragon News</h3>
+                <p class="text-sm opacity-60 mt-2">Dynamic real-time news portal.</p>
+                <!-- Brief Description -->
+                <p class="text-xs opacity-50 mt-4 leading-relaxed max-w-[250px]">
+                    A professional news application built for real-time reporting. 
+                    Features dynamic categorization, a breaking news ticker, 
+                    and a multi-column editorial layout optimized for all devices.
+                </p>
+            </div>
+            <!-- Font Awesome Tech Stack Icons -->
+            <div class="flex gap-3 text-xl opacity-80 dark:text-white pt-1">
+                <i class="fa-solid fa-layer-group" title="Next.js"></i>
+                <i class="fa-brands fa-css3-alt" title="Tailwind CSS"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</section>
+
+    <!-- Upgraded Modal -->
+    <div id="previewModal" class="fixed inset-0 z-[1000] hidden bg-black/95 backdrop-blur-2xl flex items-center justify-center p-4 md:p-10" onclick="closeModal()">
+        <button class="absolute top-8 right-8 text-white/50 hover:text-accent text-6xl z-50 transition-colors" onclick="closeModal()">&times;</button>
+        
+        <div class="bg-white dark:bg-slate-900 max-w-6xl w-full rounded-[3rem] overflow-hidden flex flex-col md:flex-row shadow-2xl animate-zoom-in" onclick="event.stopPropagation()">
+            <!-- Left Side: Image -->
+            <div class="md:w-1/2 bg-slate-100 dark:bg-black p-4 flex items-center justify-center">
+                <img id="previewImg" src="" class="max-h-[70vh] w-auto rounded-2xl shadow-lg border border-slate-200 dark:border-white/5">
+            </div>
+            
+            <!-- Right Side: Content -->
+            <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <h2 id="previewTitle" class="text-3xl md:text-5xl font-black italic uppercase text-slate-900 dark:text-white tracking-widest mb-6">Title</h2>
+                <p id="previewDesc" class="text-lg opacity-70 leading-relaxed">Description</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-black mb-12 italic tracking-widest uppercase border-l-4 border-accent pl-4">Recognition</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="bento-card p-4 rounded-3xl cursor-pointer" onclick="openModal('./img/WhatsApp Image 2026-03-07 at 7.56.10 PM.jpeg','Certificate of Appearance', 'Participation certificate for academic contribution and showcase of technical expertise.')">
+                <img src="./img/WhatsApp Image 2026-03-07 at 7.56.10 PM.jpeg" onerror="this.src='https://via.placeholder.com/300x200?text=Certificate'" class="w-full rounded-2xl shadow mb-4">
+                <p class="text-center font-bold uppercase tracking-tighter">Certificate of Appearance</p>
+            </div>
+        </div>
+    </section>
+
+
+   
+
+   <footer class="relative w-full border-t border-accent/20 dark:border-white/10 bg-white dark:bg-darkBg/50 mt-20">
+    <div class="py-16 md:py-24 max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-4">
+                Let's find <span class="text-accent">Joy</span> in the <span class="text-accent">Work</span>
+            </h3>
+        <!-- Social & Contact Fast Lane -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8" data-aos="fade-up">
+    <!-- GitHub -->
+    <a href="https://github.com/joygoswaminiloy2023-droid" target="_blank" class="btn btn-ghost border hover:border-accent border-slate-200 dark:border-white/10 rounded-2xl gap-3">
+        <i class="fa-brands fa-github"></i> GitHub
+    </a>
+    
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/joy-goswami" target="_blank" class="btn btn-ghost border hover:border-accent border-slate-200 dark:border-white/10 rounded-2xl gap-3">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
+
+    <!-- BeCrowd (Using an 'award' icon to represent problem-solving rank) -->
+    <a href="https://judge.beecrowd.com/en/profile/943168" target="_blank" class="btn btn-ghost border hover:border-accent border-slate-200 dark:border-white/10 rounded-2xl gap-3">
+        <i class="fa-solid fa-award text-yellow-500"></i> BeCrowd
+    </a>
+</div>
+
+        <!-- Direct Contact Info Row -->
+        <div class="flex flex-wrap justify-center gap-8 mb-16 text-sm font-bold uppercase tracking-widest opacity-70" data-aos="fade-up" data-aos-delay="100">
+            <a href="mailto:joygoswaminiloy2023@gmail.com" class="hover:text-accent transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-accent"></i> joygoswaminiloy2023@gmail.com
+            </a>
+            <a href="tel:+8801995496669" class="hover:text-accent transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-phone text-accent"></i> +880 1995-496669
+            </a>
+            <a href="https://wa.me/8801995496669" target="_blank" class="hover:text-[#25D366] transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-[#25D366]"></i> WhatsApp
+            </a>
+        </div>
+
+        <div class="pt-12 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="text-xl font-black italic uppercase">Joy GOSWAMI <span class="text-accent">Niloy</span></span>
+            <p class="text-[10px] opacity-40 uppercase tracking-[0.3em]">© 2026 • Handcrafted with Passion</p>
+            <div class="flex gap-4 opacity-40 text-[10px] font-bold uppercase tracking-widest">
+                <span>Dhaka, BD</span>
+                <span class="text-accent">•</span>
+                <span>UITS Student</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        new Typed('#typed-text', { 
+            strings: ['Web Architect', 'Web Developer', 'Problem Solver', 'CSE Student @ UITS'], 
+            typeSpeed: 60, backSpeed: 40, loop: true 
+        });
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('theme-icon');
+            if(icon) icon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+            localStorage.setItem('joy_theme', isDark ? 'dark' : 'light');
+        }
+
+        if (localStorage.getItem('joy_theme') === 'light') {
+            document.documentElement.classList.remove('dark');
+            const icon = document.getElementById('theme-icon');
+            if(icon) icon.className = 'fa-solid fa-sun';
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+
+        function openModal(src, title, desc) {
+            const modal = document.getElementById('previewModal');
+            const img = document.getElementById('previewImg');
+            const text = document.getElementById('previewTitle');
+            const descEl = document.getElementById('previewDesc');
+            
+            img.src = src;
+            text.innerText = title;
+            descEl.innerText = desc;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('previewModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+    </script>
+</body>
+</html>
